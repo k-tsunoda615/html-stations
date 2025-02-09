@@ -1,11 +1,10 @@
 data = "global data";
 
-// このreturnDataに代入される関数の形をアロー関数に変えて"global data"が表示されるようにしてください
-// ↓関数の中の処理は変更しないでください
+// このreturnThisDataに代入される関数の形をアロー関数に変えて"global data"が表示されるようにしてください
 const returnThisData = () => {
+  // ↓関数の中の処理は変更しないでください
   return this.data;
 };
-// ↑関数の中の処理は変更しないでください
 
 const object = {
   data: "object data",
