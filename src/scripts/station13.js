@@ -2,7 +2,7 @@ data = "global data";
 
 // このreturnDataに代入される関数の形をアロー関数に変えて"global data"が表示されるようにしてください
 // ↓関数の中の処理は変更しないでください
-const returnThisData = function () {
+const returnThisData = () => {
   return this.data;
 };
 // ↑関数の中の処理は変更しないでください
@@ -15,3 +15,7 @@ const object = {
 function getData() {
   return object.func();
 }
+
+// ## ポイント
+// - 通常の関数とアロー関数のthisの違い
+//   - 通常の関数は呼び出し元のオブジェクト（object.data）を参照するが、アロー関数はグローバルオブジェクトを参照する
